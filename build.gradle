@@ -1,18 +1,22 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
-        jcenter()
+        maven { url = "https://files.minecraftforge.net/maven/" }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
     }
 }
-repositories{
+repositories {
     maven {
         name = "CurseForge"
         url = "https://minecraft.curseforge.com/api/maven/"
     }
+
+    maven {
+        url = "https://jcenter.bintray.com"
+    }
+
     maven {
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
@@ -24,7 +28,7 @@ repositories{
 
     maven {
         name = "Mobius Repo"
-        url = "https://tehnut.info/maven"
+        url = "https://tehnut.info/maven/"
     }
     maven {
         name = "Progwml6 maven"
@@ -51,10 +55,10 @@ repositories{
 
     maven {
         name = 'DVS1 Maven FS'
-        url = 'https://dvs1.progwml6.com/files/maven'
+        url = 'https://dvs1.progwml6.com/files/maven/'
     }
 
-    maven{
+    maven {
         url = "https://maven.mcmoddev.com/"
     }
 
@@ -145,9 +149,9 @@ dependencies {
     runtimeOnly fg.deobf("mcp.mobius.waila:Hwyla:1.8.25-B40_1.12")
     runtimeOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.28-17")
     runtimeOnly fg.deobf("mezz.jei:jei_1.12.2:4.16.1.302:api")
-    //runtime "mezz.jei:jei_1.12.2:4.16.1.302"
+    runtimeOnly fg.deobf("mezz.jei:jei_1.12.2:4.16.1.302")
     compile "baubles:Baubles:1.12:1.5.2"
-    //runtimeOnly fg.deobf("thaumcraft:Thaumcraft:1.12.2:6.1.BETA26")
+    compile "thaumcraft:Thaumcraft:1.12.2:6.1.BETA26"
     compile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.674"
 }
 
@@ -155,12 +159,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title": "iceandfire",
-                "Specification-Vendor": "alexthe666",
-                "Specification-Version": "1.9.1", // We are version 1 of ourselves
-                "Implementation-Title": project.name,
-                "Implementation-Version": "${version}",
-                "Implementation-Vendor" :"examplemodsareus",
+                "Specification-Title"     : "iceandfire",
+                "Specification-Vendor"    : "alexthe666",
+                "Specification-Version"   : "1.9.1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : "${version}",
+                "Implementation-Vendor"   : "examplemodsareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
