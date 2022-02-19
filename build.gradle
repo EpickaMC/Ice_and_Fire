@@ -143,13 +143,13 @@ minecraft {
 
 dependencies {
     minecraft "net.minecraftforge:forge:1.12.2-14.23.5.2860"
-    compileOnly fg.deobf("net.ilexiconn:llibrary:1.7.19-1.12.2")
-    runtimeOnly fg.deobf("slimeknights.mantle:Mantle:1.12-1.3.3.55")
-    runtimeOnly fg.deobf("slimeknights:TConstruct:1.12.2-2.13.0.183")
-    runtimeOnly fg.deobf("mcp.mobius.waila:Hwyla:1.8.25-B40_1.12")
-    runtimeOnly fg.deobf("mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.28-17")
-    runtimeOnly fg.deobf("mezz.jei:jei_1.12.2:4.16.1.302:api")
-    runtimeOnly fg.deobf("mezz.jei:jei_1.12.2:4.16.1.302")
+    compile fg.deobf("net.ilexiconn:llibrary:1.7.9-1.12.2")
+    compile fg.deobf("slimeknights.mantle:Mantle:1.12-1.3.3.55")
+    compile fg.deobf("slimeknights:TConstruct:1.12.2-2.13.0.183")
+    compile fg.deobf("mcp.mobius.waila:Hwyla:1.8.25-B40_1.12")
+    compile fg.deobf("mcjty.theoneprobe:TheOneProbe-1.12:1.12-1.4.28-17")
+    compile fg.deobf("mezz.jei:jei_1.12.2:4.16.1.302:api")
+    compile fg.deobf("mezz.jei:jei_1.12.2:4.16.1.302")
     compile "baubles:Baubles:1.12:1.5.2"
     compile "thaumcraft:Thaumcraft:1.12.2:6.1.BETA26"
     compile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-4.1.20.674"
